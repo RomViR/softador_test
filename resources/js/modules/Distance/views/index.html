@@ -1,0 +1,59 @@
+<div id="distance" class="wrap-sm">
+    <form ng-submit="calculate()">
+        <h3>Distance calculator</h3>
+
+        <label>
+            <span>Select vehicle(s)</span>
+            <select name="cars" multiple ng-model="params.cars" id="car-select">
+                <option ng-repeat="car in options.cars" ng-value="car._id">
+                    {{ car.manufacturer }} {{ car.model }} ({{ car.plate_nr }})
+                </option>
+            </select>
+        </label>
+
+        <div id="select-controls">
+            <button type="button" ng-click="addAll()">Add all</button>
+
+            <button type="button" ng-click="removeAll()">Remove all</button>
+        </div>
+
+        <label>
+            <span>Start date</span>
+            <datepicker date-week-start-day="1"
+                        date-format="yyyy-MM-dd"
+                        datepicker-mobile=""
+                        date-min-limit="{{ options.dates.min }}"
+                        date-max-limit="{{ options.dates.max }}">
+                <input type="text" ng-model="params.dates.start" readonly>
+            </datepicker>
+        </label>
+
+        <label>
+            <span>End date</span>
+            <datepicker date-week-start-day="1"
+                        date-format="yyyy-MM-dd"
+                        datepicker-mobile=""
+                        date-min-limit="{{ options.dates.min }}"
+                        date-max-limit="{{ options.dates.max }}">
+                <input type="text" ng-model="params.dates.end" readonly>
+            </datepicker>
+        </label>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <div ng-show="data.length" id="results">
+        <h3>Results</h3>
+
+        <ol>
+            <li ng-repeat="item in data">
+                <div>
+                    {{ item.car.manufacturer }} {{ item.car.model }} ({{ item.car.plate_nr }})
+                </div>
+                <div>{{ Math.round(item.distance) }} m</div>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<button type="button" ng-click="utils.logout()" id="btn-logout">Log Out</button>

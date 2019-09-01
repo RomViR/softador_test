@@ -1,0 +1,19 @@
+<form id="login-form" class="password-form wrap-sm" ng-submit="login()">
+    <label>
+        <span>Email</span>
+        <input type="email" id="inp-email" ng-model="email" name="email" required>
+    </label>
+
+    <label>
+        <span>Password</span>
+        <input type="password" ng-model="password" name="password" required minlength="8">
+    </label>
+
+    <div id="buttons-box">
+        <button type="submit" id="btn-login">Log In</button>
+        or
+        <button type="button" ng-click="register()">Register</button>
+
+        <button type="button" ng-click="forgot()" id="btn-forgot">Forgot password?</button>
+    </div>
+</form>

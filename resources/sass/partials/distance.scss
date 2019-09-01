@@ -1,0 +1,42 @@
+#distance {
+  width: 300px;
+
+  h3, datepicker, #select-controls {
+    margin-bottom: 20px;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  #select-controls {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: calc(50% - 2px);
+      padding: 6px 8px;
+      font-size: 14px;
+      background: $cyan;
+    }
+  }
+
+  #results {
+    margin-top: 20px;
+
+    ol {
+      max-height: 200px;
+      overflow: auto;
+
+      li + li {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+#btn-logout {
+  width: 300px;
+  background: $orange;
+  margin: auto;
+}

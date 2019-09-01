@@ -1,0 +1,16 @@
+.password-form {
+  label > input {
+    margin-bottom: 20px;
+  }
+
+  #btn-forgot {
+    margin-top: 20px;
+    background-color: $cyan;
+  }
+
+  #buttons-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
