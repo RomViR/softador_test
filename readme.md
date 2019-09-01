@@ -19,6 +19,12 @@ and services are running
 
 Node.js and npm are used to manage frontend packages https://www.npmjs.com/get-npm
 
+Install backend and frontend packages by running
+```
+composer install
+npm install
+```
+
 Import MongoDB data dump. I had to "hide" .json files to restore data successfully.
 ```
 mongorestore --drop -d iGeoTrack path/to/dump/folder
@@ -40,12 +46,6 @@ Generate app encryption key and jwt key by running
 ```
 php artisan key:generate
 php artisan jwt:secret
-```
-
-Install backend and frontend packages by running
-```
-composer install
-npm install
 ```
 
 Compile assets by running
