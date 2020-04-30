@@ -34,7 +34,7 @@
         "gulp-sass": "^4.0.2",
         "gulp-sequence": "^1.0.0",
         "gulp-uglify": "^3.0.2",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "node-sass": "^4.12.0"
     }
 }
