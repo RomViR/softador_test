@@ -14,7 +14,7 @@
         "resolve-url-loader": "^2.3.1"
     },
     "dependencies": {
-        "angular": "^1.7.8",
+        "angular": "^1.8.3",
         "angular-jwt": "^0.1.11",
         "angular-permission": "^6.0.0",
         "angular-resource": "^1.7.8",
